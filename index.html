@@ -81,6 +81,46 @@
 	      		  </div>
 	      		  <div class="form-group">
 	      		    <label for="degree">Degree (if obtained)</label>
+	      		    <input type="email" class="form-control" id="degree" placeholder="BA">
+	      		  </div>
+	      		  <div class="form-group">
+	      		    <label for="fieldOfStudy">Degree (if obtained)</label>
+	      		    <input type="email" class="form-control" id="fieldOfStudy" placeholder="Audio Engineering">
+	      		  </div>
+	        		  <div class="form-group">
+	      	  		
+	      	  		<p>Remember, your NSS goes under experience, not education!</p>
+	      	  		<!-- Should we offer some kind of date-picker as a stretch goal? Would make UX better -->
+	      		  </div>
+	      		  <!-- Give users a button to add more educational stuff -->
+	      		</form>
+	      	</section>  <!--   education -->
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>  <!-- education info modal -->
+	
+	<!-- Work experience Modal -->
+	<div class="modal fade" id="workInfoModal" tabindex="-1" role="dialog" aria-labelledby="workModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="workModalLabel">Job Experience</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<section id="education">
+	      		<form class="form-horizontal">
+	      		  <div class="form-group">
+	      		    <label for=""></label>
+	      		    <input type="text" class="form-control" id="" placeholder="Belmont University">
+	      		  </div>
+	      		  <div class="form-group">
+	      		    <label for="degree">Degree (if obtained)</label>
 	      		    <input type="email" class="form-control" id="degree" placeholder="BA in Audio Engineering">
 	      		  </div>
 	        		  <div class="form-group">
@@ -101,8 +141,7 @@
 	      </div>
 	    </div>
 	  </div>
-	</div>  <!-- education info modal -->
-
+	</div>  <!-- workexperience info modal -->
 
 </div>
 
@@ -115,7 +154,7 @@
 	<section id="about"></section>
 	
 
-	<section id="work-exp"></section>
+	<section id="work-exp">
 		<form class="form-horizontal">
 		  <div class="form-group">
 		    <label for="edInst">Workplace</label>
@@ -126,16 +165,15 @@
 		    <input type="email" class="form-control" id="degree" placeholder="BA in Audio Engineering">
 		  </div>
 			  <div class="form-group">
-	  		<p>Dates are optional</p>
-	  		<p>Remember, your NSS goes under experience, not education!</p>
+	  		<p>Remember, your time at NSS goes under experience, not education!</p>
 	  		<!-- Should we offer some kind of date-picker as a stretch goal? Would make UX better -->
 		    <label for="dateStart">Date started</label>
 		    <input type="text" class="form-control" id="dateStart" placeholder="August 2004"><label for="dateEnd">Date finished</label>
 		    <input type="text" class="form-control" id="dateEnd" placeholder="May 2008">
 		  </div>
-		  <!-- Give users a button to add more educational stuff -->
 		  <button type="submit" class="btn btn-default">Next Page</button>
 		</form>
+	</section>
 
 
 	<section id="projects"></section>
