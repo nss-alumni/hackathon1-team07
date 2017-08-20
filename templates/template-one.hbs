@@ -48,9 +48,8 @@
 
 			<div id="experience-container">
 				<h3 class="header">Experience</h3>
-
 				<section id="bootcamp">
-					<h4 id="company">Nashville Software School</h4>	<h4 id="start-date">{{startDate}} - {{endDate}}</h4>
+					<h4 id="company">Nashville Software School</h4>	<h4 id="start-date">2016 - 2017</h4>
 					<h4 id="job-title">Apprentice Software Developer</h4>
 					<p id="job-summary">Intensive full-time software development bootcamp focusing on full stack development fundamentals and problem solving. The final three months of the program being executed in a simulated company environment with SCRUM methodology.</p>
 					<ul id="job-detail">
@@ -69,19 +68,19 @@
 					</ul>
 				</section>
 
+				{{#each workExperience}}
 				<section id="past-job">
-					{{#each workExperience}}
 					<h4 id="company">{{company}}</h4>
 					<h4 id="dates">{{startDate}} - {{endDate}}</h4>
-					<h4 id="job-title">{{jobTitle}}</h4>
+					<h4 id="job-title">{{positionTitle}}</h4>
 					<p id="job-summary">{{jobSummary}}</p>
 					<ul id="job-detail">
-						{{#each jobDetail}}
+						{{#each jobDetails}}
 							<li>{{this}}</li>
 						{{/each}}
 					</ul>
-					{{/each}}
 				</section>
+				{{/each}}
 			</div>
 
 			<div id="projects-container">
