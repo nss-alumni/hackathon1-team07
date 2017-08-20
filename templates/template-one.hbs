@@ -33,12 +33,14 @@
 
 			<div id="education-container">
 			<h3 class="header">Education</h3>
-
+{{!-- needs to be iterated over --}}
+			{{#each education}}
 			<section id="education">
 				<h4 id="institution">{{institution}}</h4>
 				<h4 id="degree">{{degree}}</h4>
 				<p id="field-of-study">{{fieldOfStudy}}</p>
 			</section>
+			{{/each}}
 			</div>
 		</div>
 
