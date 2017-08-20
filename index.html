@@ -11,18 +11,30 @@
 <div id="form-container" class="container">
 <h1 class="text-center">Rezoome</h1>
 
+<!-- left/right arrows navigate through templates -->
+<div class="row">
+	<div class="col-xs-1 col-xs-offset-5">
+		<button type="button" id="leftArrow">Previous</button>
+	</div>
+	<div class="col-xs-1">
+		<button type="button" id="rightArrow">Next</button>
+	</div>
+</div>
+
+<div id="container"></div>
+
 <div class="text-center btn-group-vertical">
 	<!-- Button trigger modal -->
 
-  
+
 		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactInfoModal">
 		  Basics and Contact
 		</button>
-	
+
 
 	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal">
 		  Education
-		</button>		
+		</button>
 		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#workInfoModal">
 		  Work Experience
 		</button>
@@ -120,7 +132,7 @@
 	      		    <input type="text" class="form-control" id="fieldOfStudy" placeholder="Audio Engineering">
 	      		  </div>
 	        		  <div class="form-group">
-	      	  		
+
 	      	  		<p>Remember, your NSS goes under experience, not education!</p>
 	      	  		<!-- Should we offer some kind of date-picker as a stretch goal? Would make UX better -->
 	      		  </div>
@@ -135,7 +147,7 @@
 	    </div>
 	  </div>
 	</div>  <!-- education info modal -->
-	
+
 	<!-- Work experience Modal -->
 	<div class="modal fade" id="workInfoModal" tabindex="-1" role="dialog" aria-labelledby="workModalLabel">
 	  <div class="modal-dialog" role="document">
@@ -187,9 +199,9 @@
 	    </div>
 	  </div>
 	</div>  <!-- workexperience info modal -->
-  
-  
- 
+
+
+
 <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -232,7 +244,7 @@
     </div>
   </div>
 </div>
-	
+
 <div class="modal fade" id="technologyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -289,7 +301,7 @@
       </div>
 
       <div class="modal-footer">
-      
+
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
@@ -299,10 +311,10 @@
 
 
 
-	
+
 </div>
 
-<button type="submit" id="submitButton" class="submitButton">Submit</button> 
+<button type="submit" id="submitButton" class="submitButton">Submit</button>
 
 
 
