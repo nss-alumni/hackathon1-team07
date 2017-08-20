@@ -20,7 +20,7 @@ let i = 0;
 
 function createHTML(i) {
 	// Target where the results will be displayed and send the data to the Handlebars template
-	$('#container').html(templateArray[i]());
+	$('#output').html(templateArray[i]());
 }
 
 
