@@ -1,40 +1,98 @@
-.container {
+.tmpone.output {
 	width: 816px;
 	height: 1056px;
 }
 
-.row.is-flex {
+.tmpone.row.is-flex {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.row.is-flex > [class*='col-'] {
+.tmpone.row.is-flex > [class*='col-'] {
 	display: flex;
 	flex-direction: column;
 }
 
-/*LEFT CONTAINER*/
+ /*LEFT CONTAINER*/
 
-#left-container {
+.tmpone #left-container {
 	height: 1056px;
 	padding: 10px;
 	background-color: #d3d4ce;
+	text-align: center;
+	justify-content: space-between;
 }
 
-img {
+.tmpone.dash {
+	width: 50px;
+	height: 5px;
+	background-color: #677898;
+	margin: 0 101px 0 101px;
+}
+
+.tmpone img {
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
-	justify-content: space-around;
+	margin:;
 }
 
+.tmpone #title {
+	margin: 10px 0;
+}
+
+.tmpone #contact-container i {
+	margin-right: 5px;
+}
+ 
 /*RIGHT CONTAINER*/
 
-#right-container {
+.tmpone #right-container {
 	height: 1056px;
 	background-color: #677898;
 }
 
-#right-container h3 {
+.tmpone #right-container h3 {
 	background-color: #d3d4ce;
 }
+
+.tmpone #bootcamp > * {
+	font-size: 85%;
+}
+
+.tmpone #start-date {
+	margin-top: 3px;
+}
+
+.tmpone #job-title {
+	margin-top: 3px;
+}
+
+.tmpone #job-summary {
+	margin-bottom: 3px;
+}
+
+.tmpone #job-detail {
+	margin-top: 3px;
+}
+
+.tmpone #deployed-link {
+	margin: 3px 0;
+}
+
+.tmpone #repo-link {
+	margin-bottom: 3px;
+}
+
+.tmpone #past-job > * {
+	font-size: 85%;
+}
+
+.tmpone #project > * {
+	font-size: 85%;
+}
+
+.tmpone h4 {
+	margin-bottom: 3px;
+}
+ 
