@@ -7,8 +7,46 @@
 	<script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
+<div id="form-container" class="container">
+<h1 class="text-center">Rezoome</h1>
 
-<div id="container"></div>
+<div class="text-center">
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#formModal">
+	  Get this resume started!
+	</button>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">About me</h4>
+      </div>
+      <div class="modal-body">
+        <form id="aboutme-form">
+		<label for="aboutme-input">Please provide 2-3 sentences articulating was sets you apart from other developers with a similar skill level.  Be sure to express enthusiasim!</label>
+		<textarea id="aboutme-input" type="text" class="form-control" placeholder="Max Characters : 250" maxlength="250" rows="4"></textarea>
+	</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+	
+
+
+</div>
 
 
 
@@ -16,6 +54,8 @@
 
 
 <!-- JavaScript Files-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <script type="text/javascript" src="scripts/pattern.js"></script>
 <script type="text/javascript" src="scripts/trivia.js"></script>
 <script type="text/javascript" src="scripts/leaderboard.js"></script>
