@@ -4,6 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/node_modules/font-awesome/css/font-awesome.min.css">
 	<script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
 
 </head>
@@ -25,20 +26,41 @@
 	<div class="text-center btn-group-vertical col-xs-3">
 		<!-- Button trigger modal -->
 		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactInfoModal">
-			 Basics and Contact
-		</button>
+	  Basics and Contact
+	</button>
 
+	<div id='education-buttons'>
+		<div>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal">
+			Education #1
+			</button>
+			<button id='add-edu-button' class='btn btn-default'>
+				<i class="fa fa-plus-square" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
 
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal">
-			  Education
-		</button>
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#workInfoModal">
-			Work Experience
-		</button>
-
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#projectModal">
-		  Project List
-		</button>
+	<div id='work-buttons'>
+		<div>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#workInfoModal">
+			  Work Experience #1
+			</button>
+			<button id='add-work-button' class='btn btn-default'>
+				<i class="fa fa-plus-square" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
+	
+	<div id='project-buttons'>
+		<div>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#projectModal">
+			Project #1
+			</button>
+			<button id='add-project-button' class='btn btn-default'>
+				<i class="fa fa-plus-square" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
 
 		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#aboutMeModal">
 		  About Me!
@@ -314,6 +336,9 @@
 </div>
 
 <!-- JavaScript Files-->
+
+<script type="text/javascript" src="scripts/addButtons.js"></script>
+
 <script src="/lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <script type='text/javascript' src='dist/app.js'></script>
