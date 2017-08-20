@@ -7,7 +7,7 @@
 		display: none !important;
 	}
 
-	.container, #output{
+	.container, #output, .tmpone{
 		width: 100vw;
 		margin: 0;
 		padding: 0;
