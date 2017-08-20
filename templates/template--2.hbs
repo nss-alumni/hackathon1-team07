@@ -1,4 +1,4 @@
-<div class="container tmptwo">
+<div class="container-fluid tmptwo">
 	
 	<div class="row">
 		<div id="title-container">
@@ -42,38 +42,50 @@
 
 			<div id="education-container">
 				<h3 class="header">Education</h3>
+				{{#each education}}
 				<section id="education">
 					<h4 id="institution">{{institution}}</h4>
 					<h4 id="degree">{{degree}}</h4>
 					<p id="field-of-study">{{fieldOfStudy}}</p>
 				</section>
+				{{/each}}
 			</div>
 
 			<div id="experience-container">
 				<h3 class="header">Experience</h3>
 
-				<section id="bootcamp">
-					<h4 id="company">{{company}}</h4>
-					<p>{{jobTitle}} | {{startDate}} - {{endDate}}</p>
-
-					<p id="job-summary">{{jobSummary}}</p>
+			<section id="bootcamp">
+					<h4 id="company">Nashville Software School</h4>
+					<h4 id="job-title">Apprentice Software Developer</h4>
+					<p id="job-summary">Intensive full-time software development bootcamp focusing on full stack development fundamentals and problem solving. The final three months of the program being executed in a simulated company environment with SCRUM methodology.</p>
 					<ul id="job-detail">
-						{{#each jobDetail}}
-							<li>{{this}}</li>
-						{{/each}}
+						<li>Daily hands on application of OOP fundamentals through group and individual projects</li>
+						<li>Created single page applications in JavaScript in the Angular framework as well as HTML, CSS, Bootstrap, and Materialize</li>
+						<li>Worked with jQuery for JavaScript libraries </li>
+						<li>Leveraged Razor for creating and editing MVC applications</li>
+						<li>Deployed applications through Firebase, Heroku and Azure</li>
+						<li>Source code/version control with Git/GitHub</li>
+						<li>Project management/tracking with Trello and GitHub Issue Tracking</li>
+						<li>Solution Design: wireframes and ERD’s</li>
+						<li>Created servers and RESTful API’s with MVC.Net and Web API</li>
+						<li>Retrieved and stored database information in Firebase, and SQL; testing with Moq</li>
+						<li>Utilized Gulp to automate bundling of modules, JavaScript linting, and compiling Sass</li>
+						<li>Leveraged VMware for partitioning Mac and Windows environments to utilize Visual Studio 2015 IDE</li>
 					</ul>
 				</section>
 
 				<section id="past-job">
+					{{#each workExperience}}
 					<h4 id="company">{{company}}</h4>
-					<p>{{jobTitle}} | {{startDate}} - {{endDate}}</p>
-
+					<h4 id="dates">{{startDate}} - {{endDate}}</h4>
+					<h4 id="job-title">{{jobTitle}}</h4>
 					<p id="job-summary">{{jobSummary}}</p>
 					<ul id="job-detail">
 						{{#each jobDetail}}
 							<li>{{this}}</li>
 						{{/each}}
 					</ul>
+					{{/each}}
 				</section>
 				
 			</div>

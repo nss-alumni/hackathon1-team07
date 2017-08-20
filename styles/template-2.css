@@ -18,7 +18,7 @@
 	letter-spacing: 1px;
 	color: white;
 	font-size: 1em;
-	background: #6D7075;
+	background: #6D7075 !important;
 	padding: 30px;
 }
 
@@ -43,7 +43,7 @@
 	height: 1056px;
 	padding: 20px;
 	border-right: 10px solid #6D7075;
-	background: #E2E3DE;
+	background: #E2E3DE !important;
 }
 
 .tmptwo i .fa {
@@ -54,7 +54,7 @@
 
 .tmptwo #right-container {
 	height: 1056px;
-	background: #E2E3DE;
+	background: #E2E3DE !important;
 	padding: 20px;
 }
 
