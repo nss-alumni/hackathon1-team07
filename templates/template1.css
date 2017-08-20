@@ -1,0 +1,40 @@
+.container {
+	width: 816px;
+	height: 1056px;
+}
+
+.row.is-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+	display: flex;
+	flex-direction: column;
+}
+
+/*LEFT CONTAINER*/
+
+#left-container {
+	height: 1056px;
+	padding: 10px;
+	background-color: #d3d4ce;
+}
+
+img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	justify-content: space-around;
+}
+
+/*RIGHT CONTAINER*/
+
+#right-container {
+	height: 1056px;
+	background-color: #677898;
+}
+
+#right-container h3 {
+	background-color: #d3d4ce;
+}

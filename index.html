@@ -4,42 +4,79 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/node_modules/font-awesome/css/font-awesome.min.css">
 	<script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
 
 </head>
 <body>
 <div id="form-container" class="container">
-<h1 class="text-center">Rezoome</h1>
+<h1 class="text-center noPrint">Rezoome</h1>
 
-<div class="text-center btn-group-vertical">
-	<!-- Button trigger modal -->
-
-  
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactInfoModal">
-		  Basics and Contact
-		</button>
-	
-
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal">
-		  Education
-		</button>		
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#workInfoModal">
-		  Work Experience
-		</button>
-
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#projectModal">
-	  Project List
-	</button>
-
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#aboutMeModal">
-	  About Me
-	</button>
-
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#technologyModal">
-	  Technology Stack
-	</button>
+<!-- left/right arrows navigate through templates -->
+<div class="row noPrint">
+	<div class="col-xs-1 col-xs-offset-5">
+		<button type="button" class="btn" id="leftArrow">Prev</button>
+	</div>
+	<div class="col-xs-1">
+		<button type="button" class="btn" id="rightArrow">Next</button>
+	</div>
 </div>
 
+<div class="row">
+	<div class="text-center btn-group-vertical col-xs-3 noPrint">
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactInfoModal">
+	  Basics and Contact
+	</button>
+
+	<div id='education-buttons'>
+		<div>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal">
+			Education #1
+			</button>
+			<button id='add-edu-button' class='btn btn-default'>
+				<i class="fa fa-plus-square" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
+
+	<div id='work-buttons'>
+		<div>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#workInfoModal">
+			  Work Experience #1
+			</button>
+			<button id='add-work-button' class='btn btn-default'>
+				<i class="fa fa-plus-square" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
+	
+	<div id='project-buttons'>
+		<div>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#projectModal">
+			Project #1
+			</button>
+			<button id='add-project-button' class='btn btn-default'>
+				<i class="fa fa-plus-square" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#aboutMeModal">
+		  About Me!
+		</button>
+
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#technologyModal">
+		  Technology Stack
+		</button>
+		<button type="submit" id="submitButton" class="submitButton btn btn-default">
+			Submit
+		</button>
+	</div>
+
+	<div id="output" class="col-xs-9"></div>
+</div>
 
 
 <!-- Modal -->
@@ -54,32 +91,32 @@
 	      </div>
 	      <div class="modal-body">
 					<section id="contact-info">
-						<form class="">
-						  <div class="form-group">
+						<form>
+						  <div>
 						    <label for="nameInput">Name</label>
 						    <input type="text" class="form-control" id="nameInput" placeholder="Jane Doe">
 						  </div>
-						  <div class="form-group">
+						  <div>
 						    <label for="emailInput">Email</label>
 						    <input type="email" class="form-control" id="emailInput" placeholder="jane.doe@example.com">
 						  </div>
-						  <div class="form-group">
+						  <div>
 						    <label for="portfolioInput">Portfolio Site</label>
 						    <input type="url" class="form-control" id="portfolioInput" placeholder="http://www.mystuff.mysite">
 						  </div>
-						  <div class="form-group">
+						  <div>
 						    <label for="linkedInInput">LinkedIn URL</label>
 						    <input type="url" class="form-control" id="linkedInInput" placeholder="https://www.linkedin.com/in/jane-doe-186a9a62">
 						  </div>
-						  <div class="form-group">
+						  <div>
 						    <label for="githubInput">GitHub</label>
 						    <input type="url" class="form-control" id="githubInput" placeholder="github.com/yourtag">
 						  </div>
-						  <div class="form-group">
+						  <div>
 						    <label for="addressInput">Location</label>
 						    <input type="text" class="form-control" id="addressInput" placeholder="Nashville, TN">
 						  </div>
-						  <div class="form-group">
+						  <div>
 						    <label for="phoneInput">Phone Number</label>
 						    <input type="tel" class="form-control" id="phoneInput" placeholder="(615) 222-3333">
 						  </div>
@@ -105,22 +142,22 @@
 	      </div>
 	      <div class="modal-body">
 	      	<section id="education">
-	      		<form class="">
-	      		  <div class="form-group">
+	      		<form>
+	      		  <div>
 	      		  <!-- Worry - if we have more than one education set, will these IDs work? -->
 	      		    <label for="edInstInput">Educational Institution</label>
 	      		    <input type="text" class="form-control" id="edInstInput" placeholder="Belmont University">
 	      		  </div>
-	      		  <div class="form-group">
+	      		  <div>
 	      		    <label for="degree">Degree (if obtained)</label>
 	      		    <input type="text" class="form-control" id="degree" placeholder="BA">
 	      		  </div>
-	      		  <div class="form-group">
+	      		  <div>
 	      		    <label for="fieldOfStudy">Degree (if obtained)</label>
 	      		    <input type="text" class="form-control" id="fieldOfStudy" placeholder="Audio Engineering">
 	      		  </div>
-	        		  <div class="form-group">
-	      	  		
+	        		  <div>
+
 	      	  		<p>Remember, your NSS goes under experience, not education!</p>
 	      	  		<!-- Should we offer some kind of date-picker as a stretch goal? Would make UX better -->
 	      		  </div>
@@ -135,7 +172,7 @@
 	    </div>
 	  </div>
 	</div>  <!-- education info modal -->
-	
+
 	<!-- Work experience Modal -->
 	<div class="modal fade" id="workInfoModal" tabindex="-1" role="dialog" aria-labelledby="workModalLabel">
 	  <div class="modal-dialog" role="document">
@@ -146,31 +183,31 @@
 	      </div>
 	      <div class="modal-body">
 	      	<section id="work-exp">
-	      		<form class="">
-	      		  <div class="form-group">
+	      		<form>
+	      		  <div>
 	      		    <label for="company">Company</label>
 	      		    <input type="text" class="form-control" id="company" placeholder="Nashville Software School">
 	      		  </div>
-	      		  <div class="form-group">
+	      		  <div>
 	      		    <label for="location">Company Location</label>
 	      		    <input type="text" class="form-control" id="location" placeholder="Nashville, TN">
 	      		  </div>
-	      		  <div class="form-group">
+	      		  <div>
 	      		    <label for="title">Position/Title</label>
 	      		    <input type="text" class="form-control" id="positionTitle" placeholder="Technical Writer">
 	      		  </div>
-      			  <div class="form-group">
+      			  <div>
 	      	  		<p>Remember, your time at NSS goes under experience, not education!</p>
 	      	  		<!-- Should we offer some kind of date-picker as a stretch goal? Would make UX better -->
 	      		    <label for="dateStart">Date started</label>
 	      		    <input type="text" class="form-control" id="dateStart" placeholder="August 2004"><label for="dateEnd">Date finished</label>
 	      		    <input type="text" class="form-control" id="dateEnd" placeholder="May 2008">
 	      		  </div>
-	      		  <div class="form-group">
+	      		  <div>
 	      		    <label for="jobSummary">Work Summary: give a one or two sentence description of your job OR the company for which you worked.</label>
 	      		    <textarea class="form-control" id="jobSummary" placeholder="Full time software bootcamp..."></textarea>
 	      		  </div>
-	      		  <div class="form-group">
+	      		  <div id="jobDetailsList">
 	      		    <label for="jobDetails">Give the details of what you have done during the time you were working in this job. Enter one responsibility per input box, and add more as needed</label>
 	      		    <input type="text" class="form-control" id="jobDetails1" placeholder="Deployed applications leveraging Firebase...">
 	      		    <input type="text" class="form-control" id="jobDetails2" placeholder="Created single page applications in...">
@@ -178,6 +215,9 @@
 	      		    <!-- Need to give users option to add fields -->
 	      		  </div>
 	      		</form>
+	      		  <button id='add-jobDetails-button' class='btn'>
+						<i class="fa fa-plus-square" aria-hidden="true"></i>
+				  </button>
 	      	</section>
 	      </div>
 	      <div class="modal-footer">
@@ -187,9 +227,9 @@
 	    </div>
 	  </div>
 	</div>  <!-- workexperience info modal -->
-  
-  
- 
+
+
+
 <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -248,7 +288,7 @@
     </div>
   </div>
 </div>
-	
+
 <div class="modal fade" id="technologyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -305,7 +345,7 @@
       </div>
 
       <div class="modal-footer">
-      
+
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button id="skillSubmit" type="button" class="btn btn-primary">Save changes</button>
       </div>
@@ -313,16 +353,12 @@
   </div>
 </div>
 
-
-
-	
 </div>
 
 
 <!-- JavaScript Files-->
-<script type="text/javascript" src="scripts/pattern.js"></script>
-<script type="text/javascript" src="scripts/trivia.js"></script>
-<script type="text/javascript" src="scripts/leaderboard.js"></script>
+
+<script type="text/javascript" src="scripts/addButtons.js"></script>
 <script src="/lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type='text/javascript' src='dist/app.js'></script>
 
