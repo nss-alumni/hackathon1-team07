@@ -3,6 +3,7 @@
 let eduCounter = 1;
 let workCounter = 1;
 let projectCounter = 1;
+let jobDetailsCounter = 3;
 
 $('#add-edu-button').click(()=>{
 	eduCounter ++
@@ -164,5 +165,14 @@ $('#add-project-button').click(()=>{
 	$(`#remove-project-button${projectCounter}`).click((e)=>{
 		e.currentTarget.parentNode.remove()
 	})
+})
+
+
+$('#add-jobDetails-button').click(()=>{
+	jobDetailsCounter ++
+	console.log(jobDetailsCounter)
+	$('#jobDetailsList').append(
+		`<input type="text" class="form-control" id="jobDetails${jobDetailsCounter}" placeholder="More job stuff...">`
+		);
 })
 
