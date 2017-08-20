@@ -5,32 +5,47 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+
 </head>
 <body>
-
 <div id="form-container" class="container">
-	<h1 class="text-center">Rezoome</h1>
+<h1 class="text-center">Rezoome</h1>
 
-	<div class="text-center">
-		<!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#formModal">
-		  Get this resume started!
-		</button>	
+<div class="text-center btn-group-vertical">
+	<!-- Button trigger modal -->
+
+  
 		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactInfoModal">
 		  Basics and Contact
 		</button>
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal">
+	
+
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal">
 		  Education
 		</button>		
 		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#workInfoModal">
 		  Work Experience
 		</button>
-	</div>
+
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#projectModal">
+	  Project List
+	</button>
+
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#aboutMeModal">
+	  About Me!
+	</button>
+
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#technologyModal">
+	  Technology Stack
+	</button>
+</div>
 
 
 
-	<!-- Contact Info Modal -->
-	<div class="modal fade" id="contactInfoModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel">
+<!-- Modal -->
+
+
+<div class="modal fade" id="contactInfoModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -79,7 +94,8 @@
 	  </div>
 	</div>  <!-- contact info modal -->
 
-	<!-- Education Modal -->
+
+<!-- Education Modal -->
 	<div class="modal fade" id="eduInfoModal" tabindex="-1" role="dialog" aria-labelledby="eduModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
@@ -171,32 +187,119 @@
 	    </div>
 	  </div>
 	</div>  <!-- workexperience info modal -->
+  
+  
+ 
+<div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Project List</h4>
+      </div>
+      <div class="modal-body">
+        <form id="aboutme-form">
+		<label for="aboutme-input">Please provide 2-3 sentences articulating was sets you apart from other developers with a similar skill level.  Be sure to express enthusiasim!</label>
+		<textarea id="aboutme-input" type="text" class="form-control" placeholder="Max Characters : 250" maxlength="250" rows="4"></textarea>
+	</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+
+<div class="modal fade" id="aboutMeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">About me</h4>
+      </div>
+      <div class="modal-body">
+        <form id="aboutme-form">
+		<label for="aboutme-input">Please provide 2-3 sentences articulating was sets you apart from other developers with a similar skill level.  Be sure to express enthusiasim!</label>
+		<textarea id="aboutme-input" type="text" class="form-control" placeholder="Max Characters : 250" maxlength="250" rows="4"></textarea>
+	</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+<div class="modal fade" id="technologyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Technology Stack</h4>
+      </div>
+      <div class="modal-body">
+        <form id="aboutme-form">
+		<div class="row">
+			  <div class="col-lg-6">
+			    <div class="input-group">
+			      <span class="input-group-addon">
+			        <input type="checkbox" aria-label="Checkbox for following text input">
+			      </span>
+			      <input type="text" class="form-control" aria-label="Text input with checkbox">
+			    </div>
+
+			    <div class="input-group">
+			      <span class="input-group-addon">
+			        <input type="checkbox" aria-label="Checkbox for following text input">
+			      </span>
+			      <input type="text" class="form-control" aria-label="Text input with checkbox">
+			    </div>
+
+			    <div class="input-group">
+			      <span class="input-group-addon">
+			        <input type="checkbox" aria-label="Checkbox for following text input">
+			      </span>
+			      <input type="text" class="form-control" aria-label="Text input with checkbox">
+			    </div>
+
+			    <div class="input-group">
+			      <span class="input-group-addon">
+			        <input type="checkbox" aria-label="Checkbox for following text input">
+			      </span>
+			      <input type="text" class="form-control" aria-label="Text input with checkbox">
+			    </div>
+
+			    <select class="custom-select">
+				  <option selected>Open this select menu</option>
+				  <option value="1">One</option>
+				  <option value="2">Two</option>
+				  <option value="3">Three</option>
+				</select>
+
+			</div>
+		</div>
+
+
+
+
+	</form>
+      </div>
+
+      <div class="modal-footer">
+      
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 
-<div class="container">
 	
-
-
-	<section id="about"></section>
-	
-
-
-
-
-	<section id="projects"></section>
-	
-	<section id="techs"></section>
-	
-
-
-
-
-
-
-
 </div>
 
 <button type="submit" id="submitButton" class="submitButton">Submit</button> 
