@@ -1,1 +1,90 @@
-<h1>Hello, I'm Template Two</h1>
+
+<link rel="stylesheet" type="text/css" href="../styles/template-2.css">
+
+<div class="container">
+	
+	<div class="row">
+		<div id="title-container">
+			<h1>Abby Fleming</h1>
+			<p>828.761.1259 | abbywritescode@gmail.com | Nashville, TN</p>
+		</div>
+	</div>
+
+	<div class="row is-flex">
+		
+		<div id="left-container" class="col-md-4">
+			
+			<div id="aboutme-container">
+				<h3 class="header">About</h3>
+				{{!-- <p id="about-content">{{aboutMe}}</p> --}}
+				<p id="about-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+
+			<div id="profile-links-container">
+				<span id="github"><i class="fa fa-github-alt" aria-hidden="true"></i>{{githubURL}}</span>
+				<span id="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i>{{linkedInURL}}</span>
+				<span id="port-site"><i class="fa fa-globe" aria-hidden="true"></i>{{portfolioURL}}</span>
+			</div>
+
+			<div id="projects-container">
+			<h3 class="header">Projects</h3>
+				<section id="project">
+					{{#each projects}}
+						<h4 id="project-title">{{title}}</h4>
+						<p id="repo-link">{{URL}}</p>
+						<p id="deployed-link">{{deployLink}}</p>
+						<p id="project-description">{{description}}</p>
+					{{/each}}
+				</section>
+			</div>
+
+		</div><!-- end left container -->
+
+
+
+		<div id="right-container" class="col-md-8">
+
+			<div id="education-container">
+				<h3 class="header">Education</h3>
+				<section id="education">
+					<h4 id="institution">{{institution}}</h4>
+					<h4 id="degree">{{degree}}</h4>
+					<p id="field-of-study">{{fieldOfStudy}}</p>
+				</section>
+			</div>
+
+			<div id="experience-container">
+				<h3 class="header">Experience</h3>
+
+				<section id="bootcamp">
+					<h4 id="company">{{company}}</h4>
+					<p>{{jobTitle}} | {{startDate}} - {{endDate}}</p>
+
+					<p id="job-summary">{{jobSummary}}</p>
+					<ul id="job-detail">
+						{{#each jobDetail}}
+							<li>{{this}}</li>
+						{{/each}}
+					</ul>
+				</section>
+
+				<section id="past-job">
+					<h4 id="company">{{company}}</h4>
+					<p>{{jobTitle}} | {{startDate}} - {{endDate}}</p>
+
+					<p id="job-summary">{{jobSummary}}</p>
+					<ul id="job-detail">
+						{{#each jobDetail}}
+							<li>{{this}}</li>
+						{{/each}}
+					</ul>
+				</section>
+				
+			</div>
+
+		</div> <!-- end right-container-->
+	</div> <!-- end row -->
+</div> <!-- end container -->
