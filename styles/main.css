@@ -7,10 +7,11 @@
 		display: none !important;
 	}
 
-	#output{
-		width: 100%;
+	.container, #output{
+		width: 100vw;
 		margin: 0;
 		padding: 0;
+		height: 100vh;
 	}
 
 	.col-md-4{
