@@ -1,12 +1,9 @@
-
-<link rel="stylesheet" type="text/css" href="../styles/template-2.css">
-
-<div class="container">
+<div class="container tmptwo">
 	
 	<div class="row">
 		<div id="title-container">
-			<h1>Abby Fleming</h1>
-			<p>828.761.1259 | abbywritescode@gmail.com | Nashville, TN</p>
+			<h1>{{name}}</h1>
+			<p>{{phone}} | {{email}} | {{location}}</p>
 		</div>
 	</div>
 
@@ -16,17 +13,13 @@
 			
 			<div id="aboutme-container">
 				<h3 class="header">About</h3>
-				{{!-- <p id="about-content">{{aboutMe}}</p> --}}
-				<p id="about-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
+				<p id="about-content">{{aboutMe}}</p>
 			</div>
 
 			<div id="profile-links-container">
-				<span id="github"><i class="fa fa-github-alt" aria-hidden="true"></i>{{githubURL}}</span>
-				<span id="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i>{{linkedInURL}}</span>
-				<span id="port-site"><i class="fa fa-globe" aria-hidden="true"></i>{{portfolioURL}}</span>
+				<p id="github"><i class="fa fa-github-alt" aria-hidden="true"></i> {{githubURL}}</p>
+				<p id="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i> {{linkedInURL}}</p>
+				<p id="port-site"><i class="fa fa-globe" aria-hidden="true"></i> {{portfolioURL}}</p>
 			</div>
 
 			<div id="projects-container">
