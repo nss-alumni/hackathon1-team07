@@ -11,6 +11,16 @@
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1"
+    "browserify": "^14.4.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.1.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "handlebars": "^4.0.10",
+    "hbsfy": "^2.7.0",
+    "jquery": "^3.2.1",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "matchdep": "^2.0.0"
   }
 }
