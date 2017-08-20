@@ -5,6 +5,7 @@ console.log('preview-template.js');
 /* -----BROWSERIFY ------*/
 //require() returns the exports of the module name that you specify.
 var Handlebars = require('hbsfy/runtime');
+var resumeFactory = require('./main.js');
 var	templateOne = require('../templates/template-one.hbs');
 var templateTwo = require('../templates/template--2.hbs');
 var templateThree = require('../templates/template--3.hbs');
@@ -20,7 +21,7 @@ let i = 0;
 
 function createHTML(i) {
 	// Target where the results will be displayed and send the data to the Handlebars template
-	$('#output').html(templateArray[i]());
+	$('#output').html(templateArray[i](resumeFactory));
 }
 
 
