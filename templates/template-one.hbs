@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" type="text/css" href="template1.css">
 
-<div class="container">
+<div class="container-fluid tmpone">
 	<div class="row is-flex">
 
 		<div id="left-container" class="col-md-4">
@@ -12,6 +12,8 @@
 				<h1 id="name">{{name}}</h1>
 				<h2 id="title">Software Developer</h2>
 			</div>
+
+			<div class="dash"></div>
 
 			<div id="aboutme-container">
 				<h3 class="header">About</h3>
@@ -24,9 +26,6 @@
 				<p id="phone"><i class="fa fa-phone" aria-hidden="true"></i>{{phone}}</p>
 				<p id="email"><i class="fa fa-envelope" aria-hidden="true"></i>{{email}}</p>
 				<p id="location"><i class="fa fa-map-marker" aria-hidden="true"></i>{{location}}</p>
-			</div>
-
-			<div id="prifile-links-container">
 				<p id="github"><i class="fa fa-github-alt" aria-hidden="true"></i>{{githubURL}}</p>
 				<p id="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i>{{linkedInURL}}</p>
 				<p id="port-site"><i class="fa fa-globe" aria-hidden="true"></i>{{portfolioURL}}</p>
@@ -49,8 +48,7 @@
 				<h3 class="header">Experience</h3>
 
 				<section id="bootcamp">
-					<h4 id="company">Nashville Software School</h4>
-					<h4 id="start-date">{{startDate}} - {{endDate}}</h4>
+					<h4 id="company">Nashville Software School</h4>	<h4 id="start-date">{{startDate}} - {{endDate}}</h4>
 					<h4 id="job-title">Apprentice Software Developer</h4>
 					<p id="job-summary">Intensive full-time software development bootcamp focusing on full stack development fundamentals and problem solving. The final three months of the program being executed in a simulated company environment with SCRUM methodology.</p>
 					<ul id="job-detail">
