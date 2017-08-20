@@ -8,42 +8,124 @@
 </head>
 <body>
 
-<div id="container">
-	<section id="contact-info">
-		<form class="form-horizontal">
-		  <div class="form-group">
-		    <label for="nameInput">Name</label>
-		    <input type="text" class="form-control" id="nameInput" placeholder="Jane Doe">
-		  </div>
-		  <div class="form-group">
-		    <label for="emailInput">Email</label>
-		    <input type="email" class="form-control" id="emailInput" placeholder="jane.doe@example.com">
-		  </div>
-		  <div class="form-group">
-		    <label for="addressInput">Location</label>
-		    <input type="text" class="form-control" id="addressInput" placeholder="Nashville, TN">
-		  </div>
-		  <div class="form-group">
-		    <label for="phoneInput">Phone Number</label>
-		    <input type="tel" class="form-control" id="phoneInput" placeholder="(615) 222-3333">
-		  </div>
-		  <button type="submit" class="btn btn-default">Next Page</button>
-		</form>
-	</section> <!-- contact-info -->
+<div id="form-container" class="container">
+	<h1 class="text-center">Rezoome</h1>
+
+	<div class="text-center">
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#formModal">
+		  Get this resume started!
+		</button>	
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactInfoModal">
+		  Basics and Contact
+		</button>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal">
+		  Education
+		</button>
+	</div>
+
+
+
+	<!-- Contact Info Modal -->
+	<div class="modal fade" id="contactInfoModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="contactModalLabel">Basics and Contact Information</h4>
+	      </div>
+	      <div class="modal-body">
+					<section id="contact-info">
+						<form class="form-horizontal">
+						  <div class="form-group">
+						    <label for="nameInput">Name</label>
+						    <input type="text" class="form-control" id="nameInput" placeholder="Jane Doe">
+						  </div>
+						  <div class="form-group">
+						    <label for="emailInput">Email</label>
+						    <input type="email" class="form-control" id="emailInput" placeholder="jane.doe@example.com">
+						  </div>
+						  <div class="form-group">
+						    <label for="addressInput">Location</label>
+						    <input type="text" class="form-control" id="addressInput" placeholder="Nashville, TN">
+						  </div>
+						  <div class="form-group">
+						    <label for="phoneInput">Phone Number</label>
+						    <input type="tel" class="form-control" id="phoneInput" placeholder="(615) 222-3333">
+						  </div>
+						</form>
+					</section> <!-- contact-info -->
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>  <!-- contact info modal -->
+
+	<!-- Education Modal -->
+	<div class="modal fade" id="eduInfoModal" tabindex="-1" role="dialog" aria-labelledby="eduModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="eduModalLabel">Education</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<section id="education">
+	      		<form class="form-horizontal">
+	      		  <div class="form-group">
+	      		    <label for="edInst">Educational Institution</label>
+	      		    <input type="text" class="form-control" id="edInst" placeholder="Belmont University">
+	      		  </div>
+	      		  <div class="form-group">
+	      		    <label for="degree">Degree (if obtained)</label>
+	      		    <input type="email" class="form-control" id="degree" placeholder="BA in Audio Engineering">
+	      		  </div>
+	        		  <div class="form-group">
+	      	  		<p>Dates are optional</p>
+	      	  		<p>Remember, your NSS goes under experience, not education!</p>
+	      	  		<!-- Should we offer some kind of date-picker as a stretch goal? Would make UX better -->
+	      		    <label for="dateStart">Date started</label>
+	      		    <input type="text" class="form-control" id="dateStart" placeholder="August 2004"><label for="dateEnd">Date finished</label>
+	      		    <input type="text" class="form-control" id="dateEnd" placeholder="May 2008">
+	      		  </div>
+	      		  <!-- Give users a button to add more educational stuff -->
+	      		</form>
+	      	</section>  <!--   education -->
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>  <!-- education info modal -->
+
+
+</div>
+
+
+
+<div class="container">
+	
+
 
 	<section id="about"></section>
 	
-	<section id="education">
-		<form class="form-inline">
+
+	<section id="work-exp"></section>
+		<form class="form-horizontal">
 		  <div class="form-group">
-		    <label for="edInst">Educational Institution</label>
-		    <input type="text" class="form-control" id="edInst" placeholder="Belmont University">
+		    <label for="edInst">Workplace</label>
+		    <input type="text" class="form-control" id="workplace" placeholder="Nashville Software School">
 		  </div>
 		  <div class="form-group">
-		    <label for="degree">Degree (if obtained)</label>
+		    <label for="title">Position/Title</label>
 		    <input type="email" class="form-control" id="degree" placeholder="BA in Audio Engineering">
 		  </div>
-  		  <div class="form-group">
+			  <div class="form-group">
 	  		<p>Dates are optional</p>
 	  		<p>Remember, your NSS goes under experience, not education!</p>
 	  		<!-- Should we offer some kind of date-picker as a stretch goal? Would make UX better -->
@@ -52,12 +134,10 @@
 		    <input type="text" class="form-control" id="dateEnd" placeholder="May 2008">
 		  </div>
 		  <!-- Give users a button to add more educational stuff -->
-		  <button type="submit" class="btn btn-default">Submit Education</button>
+		  <button type="submit" class="btn btn-default">Next Page</button>
 		</form>
-	</section>  <!--   education -->
 
-	<section id="work-exp"></section>
-	
+
 	<section id="projects"></section>
 	
 	<section id="techs"></section>
@@ -80,5 +160,7 @@
 <script type="text/javascript" src="scripts/pattern.js"></script>
 <script type="text/javascript" src="scripts/trivia.js"></script>
 <script type="text/javascript" src="scripts/leaderboard.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 </html>
