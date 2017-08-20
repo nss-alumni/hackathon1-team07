@@ -69,12 +69,7 @@ $("#projectSubmit").click(()=>{
 	projects.URL = $('#projectLink').val();
 	projects.deployLink = $('#deployLink').val();
 	projects.description = $('#projectDescription').val();
-	// $('#projectTitle').val('');
-	// $('#projectLink').val('');
-	// $('#deployLink').val('');
-	// $('#projectDescription').val('');
 	resume.projects.push(projects);
-
 });
 
 ///////////ABOUT ME////////////
@@ -82,7 +77,6 @@ $("#projectSubmit").click(()=>{
 $("#aboutMeSubmit").click(()=>{
 	$("#aboutMeSubmit").attr("data-dismiss","modal");
 	resume.aboutMe = $('#aboutme-input').val();
-	// $('#aboutme-input').val('');
 });
 
 ///////////SKILLS////////////
@@ -273,14 +267,30 @@ $('#add-project-button').click(()=>{
 			        <h4 class="modal-title" id="myModalLabel">Project #${projectCounter}</h4>
 			      </div>
 			      <div class="modal-body">
-			        <form id="aboutme-form">
-					<label for="aboutme-input">Please provide 2-3 sentences articulating was sets you apart from other developers with a similar skill level.  Be sure to express enthusiasim!</label>
-					<textarea id="aboutme-input" type="text" class="form-control" placeholder="Max Characters : 250" maxlength="250" rows="4"></textarea>
-				</form>
+			        <form id="projectform${projectCounter}">
+			        			<div class="form-group">
+			              		    <label for="company">Project Title</label>
+			              		    <input type="text" class="form-control" id="projectTitle${projectCounter}" placeholder="Nashville Software School">
+			              		  </div>
+			        
+			              		  <div class="form-group">
+			              		    <label for="title">Project Link</label>
+			              		    <input type="text" class="form-control" id="projectLink${projectCounter}" placeholder="Technical Writer">
+			              		  </div>
+			              		  <div class="form-group">
+			              		    <label for="title">Deployed Link (if deployed)</label>
+			              		    <input type="text" class="form-control" id="deployLink${projectCounter}" placeholder="Technical Writer">
+			              		  </div>
+
+
+			        	<label for="aboutme-input">Please provide 2-3 sentences about your project. Include the technologies that were used.</label>
+			        	<textarea id="projectDescription${projectCounter}" type="text" class="form-control" placeholder="Max Characters : 250" maxlength="250" rows="4"></textarea>
+			        </form>
+
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+			        <button type="button" class="btn btn-primary" data-dismiss="modal" id="projectSubmit${projectCounter}">Save changes</button>
 			      </div>
 			    </div>
 			  </div>
@@ -288,7 +298,17 @@ $('#add-project-button').click(()=>{
 		);
 	$(`#remove-project-button${projectCounter}`).click((e)=>{
 		e.currentTarget.parentNode.remove()
-	})
+	});
+
+	$(`#projectSubmit${projectCounter}`).click(()=>{
+	$(`#projectSubmit${projectCounter}`).attr("data-dismiss","modal");
+	let projects = {};
+	projects.title = $(`#projectTitle${projectCounter}`).val();
+	projects.URL = $(`#projectLink${projectCounter}`).val();
+	projects.deployLink = $(`#deployLink${projectCounter}`).val();
+	projects.description = $(`#projectDescription${projectCounter}`).val();
+	resume.projects.push(projects);
+});
 });
 
 
