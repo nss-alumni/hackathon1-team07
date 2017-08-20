@@ -1,14 +1,15 @@
 "use strict";
 
-let counter = 2;
+let counter = 1;
 
 $('#add-edu-button').click(()=>{
+	counter ++
 	$('#education-buttons').append(
 		`<div>
 			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal${counter}">
 			Education #${counter}
 			</button>
-			<button class='btn btn-default remove-edu-button'>
+			<button id="remove-edu-button${counter}" class='btn btn-default'>
 				<i class="fa fa-minus-square" aria-hidden="true"></i>
 			</button>
 			<!-- Education Modal -->
@@ -53,10 +54,8 @@ $('#add-edu-button').click(()=>{
 			</div>  <!-- education info modal -->
 		</div>`
 		);
-	counter ++
+	$(`#remove-edu-button${counter}`).click((e)=>{
+		e.currentTarget.parentNode.remove()
+	})
 })
 
-$('.remove-edu-button').click(()=>{
-	console.log('click')
-	console.log(this)
-})
