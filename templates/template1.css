@@ -18,7 +18,7 @@
 .tmpone #left-container {
 	height: 1056px;
 	padding: 10px;
-	background-color: #d3d4ce;
+	background-color: #d3d4ce !important;
 	text-align: center;
 	justify-content: space-between;
 }
@@ -26,7 +26,7 @@
 .tmpone.dash {
 	width: 50px;
 	height: 5px;
-	background-color: #677898;
+	background-color: #677898 !important;
 	margin: 0 101px 0 101px;
 }
 
@@ -44,16 +44,16 @@
 .tmpone #contact-container i {
 	margin-right: 5px;
 }
- 
+
 /*RIGHT CONTAINER*/
 
 .tmpone #right-container {
 	height: 1056px;
-	background-color: #677898;
+	background-color: #677898 !important;
 }
 
 .tmpone #right-container h3 {
-	background-color: #d3d4ce;
+	background-color: #d3d4ce !important;
 }
 
 .tmpone #bootcamp > * {
@@ -95,4 +95,4 @@
 .tmpone h4 {
 	margin-bottom: 3px;
 }
- 
+

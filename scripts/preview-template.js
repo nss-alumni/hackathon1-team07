@@ -11,7 +11,7 @@ var templateTwo = require('../templates/template--2.hbs');
 var templateThree = require('../templates/template--3.hbs');
 
 // add each template to an array so we can loop through them like a carousel
-let templateArray = [templateOne, templateTwo, templateThree];
+let templateArray = [templateOne, templateTwo];
 // index value used to loop through templateArray on click events
 let i = 0;
 

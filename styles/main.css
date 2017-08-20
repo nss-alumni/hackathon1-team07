@@ -7,10 +7,21 @@
 		display: none !important;
 	}
 
-	#output{
-		width: 100%;
+	.container, #output, .tmpone{
+		width: 100vw;
 		margin: 0;
 		padding: 0;
+		height: 100vh;
+	}
+
+	.col-md-4{
+		width: 33.33333%;
+		float: left;
+	}
+
+	.col-md-8{
+		width: 66.66666%;
+		float: left;
 	}
 }
 

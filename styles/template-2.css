@@ -16,7 +16,7 @@
 
 .tmptwo #title-container {
 	letter-spacing: 1px;
-	color: white;
+	color: white !important;
 	font-size: 1em;
 	background: #6D7075 !important;
 	padding: 30px;
@@ -29,7 +29,7 @@
 
 .tmptwo h3 {
 	text-transform: uppercase;
-	color: #6D7075;
+	color: #6D7075 !important;
 }
 
 /*LEFT CONTAINER*/
@@ -42,12 +42,12 @@
 .tmptwo #left-container {
 	height: 1056px;
 	padding: 20px;
-	border-right: 10px solid #6D7075;
+	border-right: 10px solid #6D7075 !important;
 	background: #E2E3DE !important;
 }
 
 .tmptwo i .fa {
-	color: white;
+	color: white !important;
 }
 
 /*RIGHT CONTAINER*/
