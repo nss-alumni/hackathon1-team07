@@ -2,3 +2,21 @@
 	box-sizing: border-box;
 }
 
+@media print{
+	.noPrint, button, .modal{
+		display: none !important;
+	}
+
+	#output{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media print and (color) {
+   * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+   }
+}
