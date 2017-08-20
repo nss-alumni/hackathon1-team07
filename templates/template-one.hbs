@@ -1,1 +1,106 @@
-<h1>Hello, I'm Template One</h1>
+
+<link rel="stylesheet" type="text/css" href="template1.css">
+
+<div class="container">
+	<div class="row is-flex">
+
+		<div id="left-container" class="col-md-4">
+
+			<div id="profile-img"><img src="{{githubURL}}.png" alt="profile image"></div>
+
+			<div id="title-container">
+				<h1 id="name">{{name}}</h1>
+				<h2 id="title">Software Developer</h2>
+			</div>
+
+			<div id="aboutme-container">
+				<h3 class="header">About</h3>
+				<p id="about-content">{{aboutMe}}</p>
+			</div>
+
+
+			<div id="contact-container">
+				<h3 class="header">Contact</h3>
+				<p id="phone"><i class="fa fa-phone" aria-hidden="true"></i>{{phone}}</p>
+				<p id="email"><i class="fa fa-envelope" aria-hidden="true"></i>{{email}}</p>
+				<p id="location"><i class="fa fa-map-marker" aria-hidden="true"></i>{{location}}</p>
+			</div>
+
+			<div id="prifile-links-container">
+				<p id="github"><i class="fa fa-github-alt" aria-hidden="true"></i>{{githubURL}}</p>
+				<p id="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i>{{linkedInURL}}</p>
+				<p id="port-site"><i class="fa fa-globe" aria-hidden="true"></i>{{portfolioURL}}</p>
+			</div>
+
+			<div id="education-container">
+			<h3 class="header">Education</h3>
+
+			<section id="education">
+				<h4 id="institution">{{institution}}</h4>
+				<h4 id="degree">{{degree}}</h4>
+				<p id="field-of-study">{{fieldOfStudy}}</p>
+			</section>
+			</div>
+		</div>
+
+		<div id="right-container" class="col-md-8">
+
+			<div id="experience-container">
+				<h3 class="header">Experience</h3>
+
+				<section id="bootcamp">
+					<h4 id="company">Nashville Software School</h4>
+					<h4 id="start-date">{{startDate}} - {{endDate}}</h4>
+					<h4 id="job-title">Apprentice Software Developer</h4>
+					<p id="job-summary">Intensive full-time software development bootcamp focusing on full stack development fundamentals and problem solving. The final three months of the program being executed in a simulated company environment with SCRUM methodology.</p>
+					<ul id="job-detail">
+						<li>Daily hands on application of OOP fundamentals through group and individual projects</li>
+						<li>Created single page applications in JavaScript in the Angular framework as well as HTML, CSS, Bootstrap, and Materialize</li>
+						<li>Worked with jQuery for JavaScript libraries </li>
+						<li>Leveraged Razor for creating and editing MVC applications</li>
+						<li>Deployed applications through Firebase, Heroku and Azure</li>
+						<li>Source code/version control with Git/GitHub</li>
+						<li>Project management/tracking with Trello and GitHub Issue Tracking</li>
+						<li>Solution Design: wireframes and ERD’s</li>
+						<li>Created servers and RESTful API’s with MVC.Net and Web API</li>
+						<li>Retrieved and stored database information in Firebase, and SQL; testing with Moq</li>
+						<li>Utilized Gulp to automate bundling of modules, JavaScript linting, and compiling Sass</li>
+						<li>Leveraged VMware for partitioning Mac and Windows environments to utilize Visual Studio 2015 IDE</li>
+					</ul>
+				</section>
+
+				<section id="past-job">
+					{{#each workExperience}}
+					<h4 id="company">{{company}}</h4>
+					<h4 id="dates">{{startDate}} - {{endDate}}</h4>
+					<h4 id="job-title">{{jobTitle}}</h4>
+					<p id="job-summary">{{jobSummary}}</p>
+					<ul id="job-detail">
+						{{#each jobDetail}}
+							<li>{{this}}</li>
+						{{/each}}
+					</ul>
+					{{/each}}
+				</section>
+			</div>
+
+			<div id="projects-container">
+			<h3 class="header">Projects</h3>
+
+				<section id="project">
+					{{#each projects}}
+					<h4 id="project-title">{{title}}</h4>
+					<p id="repo-link">{{URL}}</p>
+					<p id="deployed-link">{{deployLink}}</p>
+					<p id="project-description">{{description}}</p>
+					{{/each}}
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../lib/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
