@@ -21,6 +21,9 @@
 		</button>
 		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal">
 		  Education
+		</button>		
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#workInfoModal">
+		  Work Experience
 		</button>
 	</div>
 
@@ -44,6 +47,18 @@
 						  <div class="form-group">
 						    <label for="emailInput">Email</label>
 						    <input type="email" class="form-control" id="emailInput" placeholder="jane.doe@example.com">
+						  </div>
+						  <div class="form-group">
+						    <label for="portfolioInput">Portfolio Site</label>
+						    <input type="url" class="form-control" id="portfolioInput" placeholder="http://www.mystuff.mysite">
+						  </div>
+						  <div class="form-group">
+						    <label for="linkedInInput">LinkedIn URL</label>
+						    <input type="url" class="form-control" id="linkedInInput" placeholder="https://www.linkedin.com/in/jane-doe-186a9a62">
+						  </div>
+						  <div class="form-group">
+						    <label for="githubInput">GitHub</label>
+						    <input type="url" class="form-control" id="githubInput" placeholder="github.com/yourtag">
 						  </div>
 						  <div class="form-group">
 						    <label for="addressInput">Location</label>
@@ -76,16 +91,17 @@
 	      	<section id="education">
 	      		<form class="form-horizontal">
 	      		  <div class="form-group">
-	      		    <label for="edInst">Educational Institution</label>
-	      		    <input type="text" class="form-control" id="edInst" placeholder="Belmont University">
+	      		  <!-- Worry - if we have more than one education set, will these IDs work? -->
+	      		    <label for="edInstInput">Educational Institution</label>
+	      		    <input type="text" class="form-control" id="edInstInput" placeholder="Belmont University">
 	      		  </div>
 	      		  <div class="form-group">
 	      		    <label for="degree">Degree (if obtained)</label>
-	      		    <input type="email" class="form-control" id="degree" placeholder="BA">
+	      		    <input type="text" class="form-control" id="degree" placeholder="BA">
 	      		  </div>
 	      		  <div class="form-group">
 	      		    <label for="fieldOfStudy">Degree (if obtained)</label>
-	      		    <input type="email" class="form-control" id="fieldOfStudy" placeholder="Audio Engineering">
+	      		    <input type="text" class="form-control" id="fieldOfStudy" placeholder="Audio Engineering">
 	      		  </div>
 	        		  <div class="form-group">
 	      	  		
@@ -113,27 +129,40 @@
 	        <h4 class="modal-title" id="workModalLabel">Job Experience</h4>
 	      </div>
 	      <div class="modal-body">
-	      	<section id="education">
+	      	<section id="work-exp">
 	      		<form class="form-horizontal">
 	      		  <div class="form-group">
-	      		    <label for=""></label>
-	      		    <input type="text" class="form-control" id="" placeholder="Belmont University">
+	      		    <label for="company">Company</label>
+	      		    <input type="text" class="form-control" id="company" placeholder="Nashville Software School">
 	      		  </div>
 	      		  <div class="form-group">
-	      		    <label for="degree">Degree (if obtained)</label>
-	      		    <input type="email" class="form-control" id="degree" placeholder="BA in Audio Engineering">
+	      		    <label for="location">Company Location</label>
+	      		    <input type="text" class="form-control" id="location" placeholder="Nashville, TN">
 	      		  </div>
-	        		  <div class="form-group">
-	      	  		<p>Dates are optional</p>
-	      	  		<p>Remember, your NSS goes under experience, not education!</p>
+	      		  <div class="form-group">
+	      		    <label for="title">Position/Title</label>
+	      		    <input type="text" class="form-control" id="degree" placeholder="Technical Writer">
+	      		  </div>
+      			  <div class="form-group">
+	      	  		<p>Remember, your time at NSS goes under experience, not education!</p>
 	      	  		<!-- Should we offer some kind of date-picker as a stretch goal? Would make UX better -->
 	      		    <label for="dateStart">Date started</label>
 	      		    <input type="text" class="form-control" id="dateStart" placeholder="August 2004"><label for="dateEnd">Date finished</label>
 	      		    <input type="text" class="form-control" id="dateEnd" placeholder="May 2008">
 	      		  </div>
-	      		  <!-- Give users a button to add more educational stuff -->
+	      		  <div class="form-group">
+	      		    <label for="jobSummary">Work Summary: give a one or two sentence description of your job OR the company for which you worked.</label>
+	      		    <textarea class="form-control" id="jobSummary" placeholder="Full time software bootcamp..."></textarea>
+	      		  </div>
+	      		  <div class="form-group">
+	      		    <label for="jobDetails">Give the details of what you have done during the time you were working in this job. Enter one responsibility per input box, and add more as needed</label>
+	      		    <input type="text" class="form-control" id="jobDetails1" placeholder="Deployed applications leveraging Firebase...">
+	      		    <input type="text" class="form-control" id="jobDetails2" placeholder="Created single page applications in...">
+	      		    <input type="text" class="form-control" id="jobDetails3" placeholder="Project management and tracking with Trello and...">
+	      		    <!-- Need to give users option to add fields -->
+	      		  </div>
 	      		</form>
-	      	</section>  <!--   education -->
+	      	</section>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -154,26 +183,7 @@
 	<section id="about"></section>
 	
 
-	<section id="work-exp">
-		<form class="form-horizontal">
-		  <div class="form-group">
-		    <label for="edInst">Workplace</label>
-		    <input type="text" class="form-control" id="workplace" placeholder="Nashville Software School">
-		  </div>
-		  <div class="form-group">
-		    <label for="title">Position/Title</label>
-		    <input type="email" class="form-control" id="degree" placeholder="BA in Audio Engineering">
-		  </div>
-			  <div class="form-group">
-	  		<p>Remember, your time at NSS goes under experience, not education!</p>
-	  		<!-- Should we offer some kind of date-picker as a stretch goal? Would make UX better -->
-		    <label for="dateStart">Date started</label>
-		    <input type="text" class="form-control" id="dateStart" placeholder="August 2004"><label for="dateEnd">Date finished</label>
-		    <input type="text" class="form-control" id="dateEnd" placeholder="May 2008">
-		  </div>
-		  <button type="submit" class="btn btn-default">Next Page</button>
-		</form>
-	</section>
+
 
 
 	<section id="projects"></section>
