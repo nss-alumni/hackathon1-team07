@@ -97,7 +97,7 @@ let projectCounter = 1;
 let jobDetailsCounter = 3;
 
 $('#add-edu-button').click(()=>{
-	eduCounter ++
+	eduCounter ++;
 	$('#education-buttons').append(
 		`<div>
 			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#eduInfoModal${eduCounter}">
@@ -148,8 +148,8 @@ $('#add-edu-button').click(()=>{
 		</div>`
 		);
 	$(`#remove-edu-button${eduCounter}`).click((e)=>{
-		e.currentTarget.parentNode.remove()
-	})
+		e.currentTarget.parentNode.remove();
+	});
 	$(`#saveEdu${eduCounter}`).click(()=>{
 		$(`#saveEdu${eduCounter}`).attr("data-dismiss","modal");
 		let education = {};
@@ -161,10 +161,10 @@ $('#add-edu-button').click(()=>{
 		// $('#fieldOfStudy').val('');
 		resume.education.push(education);
 	});
-})
+});
 
 $('#add-work-button').click(()=>{
-	workCounter ++
+	workCounter ++;
 	$('#work-buttons').append(
 		`<div>
 			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#workInfoModal${workCounter}">
@@ -227,8 +227,8 @@ $('#add-work-button').click(()=>{
 	</div>`
 		);
 	$(`#remove-work-button${workCounter}`).click((e)=>{
-		e.currentTarget.parentNode.remove()
-	})
+		e.currentTarget.parentNode.remove();
+	});
 
 $(`#workSubmit${workCounter}`).click(()=>{
 	$(`#workSubmit${workCounter}`).attr("data-dismiss","modal");
@@ -246,10 +246,10 @@ $(`#workSubmit${workCounter}`).click(()=>{
 	resume.workExperience.push(workExperience);
 	console.log("resume.work", resume.workExperience);
 });
-})
+});
 
 $('#add-project-button').click(()=>{
-	projectCounter ++
+	projectCounter ++;
 	$('#project-buttons').append(
 		`<div>
 			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#projectModal${projectCounter}">
@@ -297,7 +297,7 @@ $('#add-project-button').click(()=>{
 			</div>`
 		);
 	$(`#remove-project-button${projectCounter}`).click((e)=>{
-		e.currentTarget.parentNode.remove()
+		e.currentTarget.parentNode.remove();
 	});
 
 	$(`#projectSubmit${projectCounter}`).click(()=>{
@@ -313,8 +313,8 @@ $('#add-project-button').click(()=>{
 
 
 $('#add-jobDetails-button').click(()=>{
-	jobDetailsCounter ++
-	console.log(jobDetailsCounter)
+	jobDetailsCounter ++;
+	console.log(jobDetailsCounter);
 	$('#jobDetailsList').append(
 		`<input type="text" class="form-control" id="jobDetails${jobDetailsCounter}" placeholder="More job stuff...">`
 		);
